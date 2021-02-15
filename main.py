@@ -1,24 +1,26 @@
 from random import random
-from insertion_sort.basic_insertion_sort import insertion_sort
-from random import shuffle
+from typing import List
+from binary_search.basic_bs import binary_search
+
+
+
+# def style_print(array: List):
+#     row = 0
+#     for i in range(len(array)):
+#         if row == 10:
+#             row = 0
+#             print("\n")
+#         print(f"{array[i]}", end="\t")
+#         row += 1
+
 
 
 def main():
-    # data to sort
-    need_to_sort = []
-
-    for ranadom in range(1,10000):
-        need_to_sort.append(ranadom)
+    m = [1,2,4,5,6,7,8,9,10]
     
-    shuffle(need_to_sort)
-
-    print(f"\n\nGiven Array \t==>\t {need_to_sort}")
-
-    # run the algorithm
-    insertion_sort(need_to_sort)
-
-    # display sorted output
-    print(f"\n\nSorted Array \t==>\t {need_to_sort}")
+    result = binary_search(m, 10)
+    print(result)
 
 if __name__=='__main__':
+    print("Hello World")
     main()

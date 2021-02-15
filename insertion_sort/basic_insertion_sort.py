@@ -9,10 +9,8 @@ that the sorted sublist is one item larger.
 from typing import List, NoReturn
 
 
-def insertion_sort(data_to_sort: List) -> NoReturn:
+def number_insertion_sort(data_to_sort: List) -> NoReturn:
 
-    global ForCounter, WhileCounter
-    # need_to_sort = [8, 4, 2, 4, 5, 6, 1]
     for index in range(1, len(data_to_sort)):
         key = data_to_sort[index] # 4
         sorted_position = index-1 # 0
@@ -23,7 +21,6 @@ def insertion_sort(data_to_sort: List) -> NoReturn:
             sorted_position -= 1
 
         data_to_sort[sorted_position + 1] = key
-
  
 # 1st random number sorting ->  6.154s
 # 2st random number sorting ->  6.296s
